@@ -2,6 +2,11 @@ console.log('padLefts script has loaded');
 
 // write this function!
 function padLeft(string, length) {
+  if( string.length > length){
+    return string;
+  }else{
+    
+  }
 }
 
 // if the string is already as long as or longer than the length
