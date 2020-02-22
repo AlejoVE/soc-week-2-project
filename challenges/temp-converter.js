@@ -2,6 +2,17 @@ console.log('tempConverter script has loaded');
 
 // write this function!
 function tempConverter(temperature, degrees) {
+  if (degrees === 'farenheit') {
+    //	Multiply by 9, then divide by 5, then add 32
+    let temp = (temperature*9)/5+32 + " ° celcius ";
+    return temp;
+  } else if (degrees === 'celcius') {
+    //Deduct 32, then multiply by 5, then divide by 9
+    let temp = ((temperature-32)*5)/9 + "° farenheit";
+    return temp;
+  } else {
+    return degrees + ' is not supported';
+  }
 }
 
 // if the user wants to convert to farenheit
@@ -30,10 +41,10 @@ function tempConverterHandler() {
 
   // perform core logic
   // write this line!
-
+  var tempConvert = tempConverter(userTempStr, userDegrees);
   // alert result for the user
   // write this line!
-
+  alert(tempConvert);
   // log action for the developer
   console.log('\n--- tempConverter ---');
   console.log('userTemp:', '(' + typeof userTemp + '),', userTemp);
